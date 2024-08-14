@@ -5,7 +5,7 @@ function App() {
     return (
         <div>
             <Title
-                title={"Dice"}
+                title={"Dice Roll"}
             />
             <Dice />
         </div>
