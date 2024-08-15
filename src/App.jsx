@@ -1,14 +1,8 @@
-import Title from "./components/Title";
-import Dice from "./components/Dice";
+import Box from "./components/Box";
 
 function App() {
     return (
-        <div>
-            <Title
-                title={"Dice Roll"}
-            />
-            <Dice />
-        </div>
+        <Box />
     );
 }
 
