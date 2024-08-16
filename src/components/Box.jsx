@@ -1,6 +1,7 @@
 import Title from "./Title";
 import Dice from "./Dice";
 import Roll from "./Roll";
+import DisplayResult from "./DisplayResult";
 import { useState } from "react";
 
 function Box() {
@@ -40,27 +41,33 @@ function Box() {
                 )}
             </div>
 
-            <div className="flex justify-center fixed bottom-4 w-full opacity-80">
-                <div className="text-center">
-                    <button onClick={removeDice}
-                        className="inline-flex h-12 items-center justify-center rounded-md bg-neutral-950 px-6 font-medium text-neutral-50 shadow-lg shadow-neutral-500/20 transition active:scale-95">-</button>
-                </div>
-                <div className="text-center mx-4">
-                    {isRolling ?
-                        <Roll
-                            isRolling={isRolling}
-                            setIsRolling={setIsRolling}
-                            results={results}
-                            setResults={setResults}
-                        /> :
-                        <button onClick={() => setIsRolling(true)}
-                            className="inline-flex h-12 items-center justify-center rounded-md bg-neutral-950 px-6 font-medium text-neutral-50 shadow-lg shadow-neutral-500/20 transition active:scale-95">ダイスロール！！</button>}
-                </div>
-                <div className="text-center">
-                    <button onClick={addDice}
-                        className="inline-flex h-12 items-center justify-center rounded-md bg-neutral-950 px-6 font-medium text-neutral-50 shadow-lg shadow-neutral-500/20 transition active:scale-95">+</button>
-                </div>
-            </div >
+            <div className="fixed bottom-4 w-full opacity-80">
+                <DisplayResult
+                    results={results}
+                />
+
+                <div className="flex justify-center mt-4">
+                    <div className="text-center">
+                        <button onClick={removeDice}
+                            className="inline-flex h-12 items-center justify-center rounded-md bg-neutral-950 px-6 font-medium text-neutral-50 shadow-lg shadow-neutral-500/20 transition active:scale-95">-</button>
+                    </div>
+                    <div className="text-center mx-4">
+                        {isRolling ?
+                            <Roll
+                                isRolling={isRolling}
+                                setIsRolling={setIsRolling}
+                                results={results}
+                                setResults={setResults}
+                            /> :
+                            <button onClick={() => setIsRolling(true)}
+                                className="inline-flex h-12 items-center justify-center rounded-md bg-neutral-950 px-6 font-medium text-neutral-50 shadow-lg shadow-neutral-500/20 transition active:scale-95 w-44">ダイスロール！！</button>}
+                    </div>
+                    <div className="text-center">
+                        <button onClick={addDice}
+                            className="inline-flex h-12 items-center justify-center rounded-md bg-neutral-950 px-6 font-medium text-neutral-50 shadow-lg shadow-neutral-500/20 transition active:scale-95">+</button>
+                    </div>
+                </div >
+            </div>
         </div>
 
     );
