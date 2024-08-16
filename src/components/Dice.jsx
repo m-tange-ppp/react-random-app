@@ -54,7 +54,7 @@ function Dice(props) {
     }
 
     return (
-        <div className="flex justify-center items-center aspect-square border-solid border-neutral-500 border-4 rounded-[20%] p-[5%]">
+        <div className="flex justify-center items-center w-full h-full border-solid border-neutral-500 border-4 rounded-[20%] p-[5%]">
             {displayRoll(props.results[props.index])}
         </div>
     );

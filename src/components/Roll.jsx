@@ -4,7 +4,7 @@ function Roll(props) {
     useEffect(() => {
         const interval = setInterval(() => {
             props.setResults(Array.from({ length: props.results.length }, () => Math.floor(Math.random() * 6 + 1)));
-        }, 200);
+        }, 100);
         return () => clearInterval(interval);
     }, []);
 
