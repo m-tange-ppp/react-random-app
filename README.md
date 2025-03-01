@@ -1,8 +1,55 @@
-# React + Vite
+# サイコロアプリケーション
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 概要
 
-Currently, two official plugins are available:
+このアプリケーションは、シンプルで使いやすいデジタルサイコロを提供する Web アプリケーションです。複数のサイコロを同時に振ることができ、各サイコロの出目と集計結果をリアルタイムで確認できます。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 主な機能
+
+- サイコロを振る（ストップボタンで停止）
+- サイコロの追加・削除（+/-ボタン）
+- リアルタイムなアニメーション効果
+- 出目の集計表示（1〜6 の出目ごとの個数）
+- レスポンシブデザイン対応
+
+## 使い方
+
+1. 「+」「-」ボタンでサイコロの数を調整できます
+2. 「ダイスロール！！」ボタンを押すとサイコロが回転を始めます
+3. 「ストップ！！」ボタンを押すと結果が確定します
+4. 画面下部で出目ごとの集計結果を確認できます
+
+## 技術仕様
+
+### フロントエンド
+
+- React 18
+- Vite
+- TailwindCSS
+
+### サイコロの実装詳細
+
+- 1〜6 の目を CSS Grid で表現
+- 100 ミリ秒ごとにランダムな数値を生成
+- 複数サイコロの同時制御
+- Flexbox によるレスポンシブなレイアウト
+
+## 開発環境のセットアップ
+
+1. 必要条件
+
+   - Node.js 16.0.0 以上
+   - npm 7.0.0 以上
+
+2. インストール
+
+   ```bash
+   git clone [リポジトリURL]
+   cd react-random-app
+   npm install
+   ```
+
+3. 開発サーバーの起動
+   ```bash
+   npm run dev
+   ```
